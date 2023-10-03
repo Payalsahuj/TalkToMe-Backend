@@ -27,6 +27,8 @@ app.post("/talktome", async (req, res) => {
     // Add user message to conversation history
     conversationHistory.push({ role: "user", content: userMessage });
 
+
+    
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [
